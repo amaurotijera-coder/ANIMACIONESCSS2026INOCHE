@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Cohete animación</title>
+<title>Cohete space</title>
 
 <style>
 body{
@@ -11,39 +11,37 @@ body{
     background:black;
 }
 
-/* estrellas */
 .estrella{
     position:absolute;
     background:white;
     border-radius:50%;
-    left:-10px; 
 }
 
-/* tamaños, posiciones y velocidades */
-.e1{ width:2px; height:2px; top:10%; animation: mover 3s linear infinite; }
-.e2{ width:3px; height:3px; top:30%; animation: mover 5s linear infinite; }
-.e3{ width:2px; height:2px; top:50%; animation: mover 2.5s linear infinite; }
-.e4{ width:4px; height:4px; top:70%; animation: mover 6s linear infinite; }
-.e5{ width:3px; height:3px; top:20%; animation: mover 4s linear infinite; }
-.e6{ width:2px; height:2px; top:40%; animation: mover 3.5s linear infinite; }
-.e7{ width:3px; height:3px; top:65%; animation: mover 5.5s linear infinite; }
+.e1{ width:2px; height:2px; top:10%; left:10%; animation: mover1 5s linear infinite; }
+.e2{ width:3px; height:3px; top:30%; left:20%; animation: mover2 6s linear infinite; }
+.e3{ width:2px; height:2px; top:50%; left:30%; animation: mover3 4.5s linear infinite; }
+.e4{ width:4px; height:4px; top:70%; left:40%; animation: mover4 7s linear infinite; }
+.e5{ width:3px; height:3px; top:20%; left:15%; animation: mover5 4s linear infinite; }
+.e6{ width:2px; height:2px; top:40%; left:25%; animation: mover6 5.5s linear infinite; }
+.e7{ width:3px; height:3px; top:65%; left:35%; animation: mover7 6.5s linear infinite; }
 
-@keyframes mover{
-    from{ transform: translateX(0); }
-    to{ transform: translateX(110vw); }
-}
+@keyframes mover1{ from{ transform: translateX(0); } to{ transform: translateX(120vw); } }
+@keyframes mover2{ from{ transform: translateX(0); } to{ transform: translateX(120vw); } }
+@keyframes mover3{ from{ transform: translateX(0); } to{ transform: translateX(120vw); } }
+@keyframes mover4{ from{ transform: translateX(0); } to{ transform: translateX(120vw); } }
+@keyframes mover5{ from{ transform: translateX(0); } to{ transform: translateX(120vw); } }
+@keyframes mover6{ from{ transform: translateX(0); } to{ transform: translateX(120vw); } }
+@keyframes mover7{ from{ transform: translateX(0); } to{ transform: translateX(120vw); } }
 
-/* COHETE */
 .cohete{
     position:absolute;
     top:50%;
     left:50%;
-    transform: translate(-50%, -50%) rotate(-90deg);
-    width:250px;
+    transform: translate(-50%, -50%) rotate(-90deg); 
+    width:100px;
 }
 
 .cohete img{
-    width:100%;
     animation: flotar 3s ease-in-out infinite;
 }
 
@@ -52,7 +50,6 @@ body{
     50%{ transform: translateY(-6px); }
     100%{ transform: translateY(0px); }
 }
-
 </style>
 </head>
 
@@ -67,7 +64,7 @@ body{
 <div class="estrella e7"></div>
 
 <div class="cohete">
-    <img src="img/cohete space.gif" alt="cohete">
+    <img src="img/cohete_space.gif">
 </div>
 
 </body>
