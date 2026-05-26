@@ -1,0 +1,143 @@
+body{
+    background-color: black;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.contenedor{
+    width: 600px;
+    height: 900px;
+    border: 1px solid white;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background-color: black;
+}
+.franja1{
+    width: 700px;
+    height: 400px;
+    background-color: #f5c400;
+    position: absolute;
+    top: 200px;
+    left: -50px;
+    clip-path: polygon(0 0, 100% 50%, 100% 100%, 0 50%);
+    z-index: 2;
+    animation: franja1 8s 1 forwards;
+}
+
+.franja2{
+    width: 350px;
+    height: 400px;
+    background-color: #f5c400;
+    position: absolute;
+    top: 470px;
+    left: 40px;
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+    z-index: 4;
+    animation: franja2 6s 1 forwards;
+}
+.franja3{
+    width: 700px;
+    height: 900px;
+    background-color: #0d1b52;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+    z-index: 1;
+    animation: fondo 12s 1 forwards;
+}
+.modelo{
+    width: 520px;
+    position:absolute;
+    top: 220px;
+    left: -20px;
+    z-index: 3;
+    animation: modelo 7s 1 forwards;
+}
+.titulo{
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    z-index: 5;
+    font-size: 55px;
+    line-height: 55px;
+    font-family: Arial;
+    font-weight: bold;
+    animation: titulo 5s 1 forwards;
+}
+
+.amarillo{
+    color: #f5c400;
+}
+
+.blanco{
+    color: white;
+}
+/*LAS RICAS ANIMACIONES*/
+@keyframes fondo{
+
+    from{
+        transform: scale(1);
+        filter: blur(5px);
+    }
+    to{
+        transform: scale(1.1);
+        filter: blur(0px);
+    }
+
+}
+
+@keyframes franja1{
+
+    from{
+        left:-200px;
+        opacity:0;
+    }
+    to{
+        left:-50px;
+        opacity:1;
+    }
+
+}
+@keyframes franja2{
+
+    from{
+        transform: translateY(100px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity:1;
+    }
+}
+
+@keyframes modelo{
+
+    from{
+        top:300px;
+        scale:80%;
+        opacity:0;
+        filter: grayscale(100%);
+    }
+    to{
+        top:220px;
+        scale:100%;
+        opacity:1;
+        filter: grayscale(0%);
+    }
+
+}
+
+@keyframes titulo{
+    from{
+        transform: translateX(100px);
+        opacity:0;
+    }
+
+    to{
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
