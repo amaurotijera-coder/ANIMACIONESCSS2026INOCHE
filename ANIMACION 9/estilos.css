@@ -141,3 +141,21 @@ body{
         opacity:1;
     }
 }
+.volver{
+    position: fixed;
+    top: 5px;
+    left: 20px; 
+    width: 140px;   
+    height: 40px;   
+    background: yellow;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px; 
+    font-size: 16px;   
+    font-family: Arial;
+    border-radius: 12px;
+    transition: 0.4s;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.4);
+    z-index: 10;
+}
